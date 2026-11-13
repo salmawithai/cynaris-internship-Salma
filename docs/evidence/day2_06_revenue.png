@@ -1,0 +1,15 @@
+PS D:\Projects\cynaris-internship-Salma> python -c "import pandas as pd; orders=pd.read_csv('data/orders.csv'); products=pd.read_csv('data/products.csv'); merged=orders.merge(products,on='Product_ID',how='left'); merged['Revenue'] = merged['Quantity'] * merged['Price (INR)']; print('========== REVENUE CALCULATION =========='); print(merged[['Order_ID','Product_Name','Quantity','Price (INR)','Revenue']].head(10).to_string(index=False)); print('\nTotal Revenue (INR):',merged['Revenue'].sum())"
+========== REVENUE CALCULATION ==========
+ Order_ID    Product_Name  Quantity  Price (INR)  Revenue
+        1     Maiores Box         5         1374     6870
+        2         Aut Box         2         1977     3954
+        3     Maiores Box         5         1374     6870
+        4    Deserunt Box         5         1915     9575
+        5        Sed Pack         2         1492     2984
+        6       Velit Set         4         1778     7112
+        7       Iusto Set         2          722     1444
+        8   Quisquam Pack         3          750     2250
+        9 Architecto Gift         4          548     2192
+       10       Quia Gift         3         1272     3816
+
+Total Revenue (INR): 3520984

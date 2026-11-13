@@ -1,0 +1,82 @@
+PS D:\Projects\cynaris-internship-Salma> python .\src\project_task_day3.py
+INFO: All datasets loaded successfully.
+INFO: Orders with invalid customer/product references: 0
+
+========== CUSTOMERS ==========
+Shape: (100, 7)
+Missing Values:
+Customer_ID       0
+Name              0
+City              0
+Contact_Number    0
+Email             0
+Gender            0
+Address           0
+dtype: int64
+Duplicate Rows: 0
+Data Types:
+Customer_ID       string
+Name              string
+City              string
+Contact_Number    string
+Email             string
+Gender            string
+Address           string
+dtype: object
+--------------------------------------------------
+
+========== ORDERS ==========
+Shape: (1000, 10)
+Missing Values:
+Order_ID         0
+Customer_ID      0
+Product_ID       0
+Quantity         0
+Order_Date       0
+Order_Time       0
+Delivery_Date    0
+Delivery_Time    0
+Location         0
+Occasion         0
+dtype: int64
+Duplicate Rows: 0
+Data Types:
+Order_ID                  int64
+Customer_ID              string
+Product_ID                int64
+Quantity                  int64
+Order_Date       datetime64[us]
+Order_Time               string
+Delivery_Date    datetime64[us]
+Delivery_Time            string
+Location                 string
+Occasion                 string
+dtype: object
+--------------------------------------------------
+
+========== PRODUCTS ==========
+Shape: (70, 5)
+Missing Values:
+Product_ID      0
+Product_Name    0
+Category        0
+Price (INR)     0
+Occasion        0
+dtype: int64
+Duplicate Rows: 0
+Data Types:
+Product_ID       int64
+Product_Name    string
+Category        string
+Price (INR)      int64
+Occasion        string
+dtype: object
+--------------------------------------------------
+INFO: All cleaned datasets saved successfully.
+
+========== NUMPY SUMMARY ==========
+Total Quantity: 3045.0
+Average Quantity: 3.04
+Minimum Quantity: 1.0
+Maximum Quantity: 5.0
+INFO: Day 3 task completed successfully.

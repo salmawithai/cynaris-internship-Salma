@@ -1,0 +1,21 @@
+PS D:\Projects\cynaris-internship-Salma> python -c "import pandas as pd; d=pd.read_csv('data/orders.csv'); result=d.groupby('Product_ID')['Quantity'].sum().reset_index(); print('========== GROUPBY =========='); print('Total unique products:',len(result)); print('\nTotal quantity sold per product:'); print(result.head(15).to_string(index=False))"
+========== GROUPBY ==========
+Total unique products: 70
+
+Total quantity sold per product:
+ Product_ID  Quantity
+          1        63
+          2        21
+          3        56
+          4        51
+          5        22
+          6        51
+          7        59
+          8        38
+          9        56
+         10        41
+         11        27
+         12        49
+         13        61
+         14        51
+         15        30

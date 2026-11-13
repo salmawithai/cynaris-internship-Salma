@@ -1,0 +1,17 @@
+PS D:\Projects\cynaris-internship-Salma> python -c "import pandas as pd; orders=pd.read_csv('data/orders.csv'); customers=pd.read_csv('data/customers.csv'); products=pd.read_csv('data/products.csv'); merged=orders.merge(customers,on='Customer_ID',how='left').merge(products,on='Product_ID',how='left'); merged['Revenue']=merged['Quantity']*merged['Price (INR)']; pivot=merged.pivot_table(index='City',columns='Category',values='Revenue',aggfunc='sum',fill_value=0); print('========== PIVOT TABLE =========='); print('Revenue by City and Category:'); print(pivot.head(10).to_string()); print('\nPivot table shape:',pivot.shape)"
+========== PIVOT TABLE ==========
+Revenue by City and Category:
+Category     Cake  Colors   Mugs  Plants  Raksha Bandhan  Soft Toys  Sweets
+City                                                                       
+Agra         5982    1605  11875    9370               0      22261   19316
+Ahmednagar      0    7627      0    5612               0      13489       0
+Aizawl       3550   18225      0    1765               0       3252   13368
+Ajmer        3336   11098      0       0            6294          0    7515
+Aligarh         0    2449      0     441               0       1084    9885
+Anand           0    6256   1234    3360               0       9279   17899
+Anantapuram     0    9935   1605     422               0       7212   13282
+Berhampore   3138   26034   2746       0               0        597    1923
+Bharatpur    7032    1915      0       0            2250      16393    5142
+Bhatpara     4631   29222      0     441               0      25996   12683
+
+Pivot table shape: (86, 7)

@@ -1,0 +1,17 @@
+PS D:\Projects\cynaris-internship-Salma> python -c "import pandas as pd; orders=pd.read_csv('data/orders.csv'); customers=pd.read_csv('data/customers.csv'); products=pd.read_csv('data/products.csv'); merged=orders.merge(customers,on='Customer_ID',how='left').merge(products,on='Product_ID',how='left'); print('========== MERGE =========='); print('Orders shape:',orders.shape); print('Customers shape:',customers.shape); print('Products shape:',products.shape); print('Merged shape:',merged.shape); print('\nMerged columns:'); print(merged.columns.tolist()); print('\nMerged data (first 5 rows):'); print(merged.head().to_string(index=False))"
+========== MERGE ==========
+Orders shape: (1000, 10)
+Customers shape: (100, 7)
+Products shape: (70, 5)
+Merged shape: (1000, 20)
+
+Merged columns:
+['Order_ID', 'Customer_ID', 'Product_ID', 'Quantity', 'Order_Date', 'Order_Time', 'Delivery_Date', 'Delivery_Time', 'Location', 'Occasion_x', 'Name', 'City', 'Contact_Number', 'Email', 'Gender', 'Address', 'Product_Name', 'Category', 'Price (INR)', 'Occasion_y']
+
+Merged data (first 5 rows):
+ Order_ID Customer_ID  Product_ID  Quantity Order_Date Order_Time Delivery_Date Delivery_Time  Location      Occasion_x           Name        City  Contact_Number               Email Gender                                  Address Product_Name       Category  Price (INR)      Occasion_y
+        1        C037          67         5  2/24/2023   23:48:13      3/5/2023       7:27:10 Bardhaman     Anniversary  Aradhya Kumar  Davanagere      1972392634  faiyaz10@yahoo.com   Male      123, Sagar Road\nDharmavaram-048740  Maiores Box Raksha Bandhan         1374     Anniversary
+        2        C019          41         2  11/7/2023   23:30:18    11/13/2023       7:16:17    Jaipur          Diwali Amira Sengupta     Danapur    914513393592    purab20@dhar.com   Male          77\nDass Street\nSasaram-948992      Aut Box         Sweets         1977          Diwali
+        3        C029          67         5  7/14/2023   19:12:03     7/19/2023      17:39:00  Bilaspur     Anniversary    Badal Sathe    Haridwar    912454360885 lavanya23@yahoo.com Female           H.No. 78, Suresh, Hapur-924072  Maiores Box Raksha Bandhan         1374     Anniversary
+        4        C012          14         5  7/10/2023    4:44:29     7/19/2023       6:33:23  Guwahati        Birthday   Onkar Mangat    Bilaspur    919921125624 oorjabassi@wali.com   Male H.No. 460, Sankar Ganj\nTadipatri 227246 Deserunt Box         Colors         1915        Birthday
+        5        C078          58         2  2/11/2023   19:44:48     2/18/2023      11:08:52    Rajkot Valentine's Day   Jivika Rajan Bhubaneswar      3005266310 hunar08@hotmail.com Female             67\nCheema\nBardhaman 968232     Sed Pack           Cake         1492 Valentine's Day

@@ -1,0 +1,5 @@
+PS D:\Projects\cynaris-internship-Salma> python -c "import os; files=['data/processed/cleaned_sales.csv','data/processed/cleaned_sales.parquet']; print('========== EXPORT SIZE COMPARISON =========='); [(print(f, '->', os.path.getsize(f), 'bytes')) for f in files]; csv=os.path.getsize(files[0]); pq=os.path.getsize(files[1]); print('Space saved:', round((csv-pq)/csv*100,2),'%')"
+========== EXPORT SIZE COMPARISON ==========
+data/processed/cleaned_sales.csv -> 214834 bytes
+data/processed/cleaned_sales.parquet -> 64050 bytes
+Space saved: 70.19 %
