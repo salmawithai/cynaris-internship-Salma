@@ -1,0 +1,17 @@
+python -c "import pandas as pd; d=pd.read_csv('data/orders.csv'); filtered=d[d['Quantity']>1]; print('========== FILTERING =========='); print('Original records:',len(d)); print('Filtered records:',len(filtered)); print('\nOrders with Quantity > 1:'); print(filtered.head(10).to_string(index=False))"ship-Salma> 
+========== FILTERING ==========
+Original records: 1000
+Filtered records: 804
+
+Orders with Quantity > 1:
+ Order_ID Customer_ID  Product_ID  Quantity Order_Date Order_Time Delivery_Date Delivery_Time  Location        Occasion
+        1        C037          67         5  2/24/2023   23:48:13      3/5/2023       7:27:10 Bardhaman     Anniversary
+        2        C019          41         2  11/7/2023   23:30:18    11/13/2023       7:16:17    Jaipur          Diwali
+        3        C029          67         5  7/14/2023   19:12:03     7/19/2023      17:39:00  Bilaspur     Anniversary
+        4        C012          14         5  7/10/2023    4:44:29     7/19/2023       6:33:23  Guwahati        Birthday
+        5        C078          58         2  2/11/2023   19:44:48     2/18/2023      11:08:52    Rajkot Valentine's Day
+        6        C040          28         4  8/20/2023   22:11:35     8/26/2023      19:06:46     Sirsa  Raksha Bandhan
+        7        C009          45         2   5/8/2023    1:45:13     5/13/2023      10:07:17    Nanded        Birthday
+        8        C097          43         3  11/8/2023   19:20:02    11/14/2023       8:44:45    Morena          Diwali
+        9        C044          27         4  8/20/2023   23:39:51     8/29/2023      23:59:54    Rajkot  Raksha Bandhan
+       10        C099          56         3  2/26/2023    0:17:26      3/8/2023      20:47:43    Ambala     Anniversary

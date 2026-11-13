@@ -1,0 +1,86 @@
+PS D:\Projects\cynaris-internship-Salma> python .\src\project_task_day2.py
+
+========== DATASET INFORMATION ==========
+
+CUSTOMERS
+Shape: (100, 7)
+
+Data Types:
+Customer_ID         str
+Name                str
+City                str
+Contact_Number    int64
+Email               str
+Gender              str
+Address             str
+dtype: object
+
+First 10 Records:
+  Customer_ID  ...                                     Address
+0        C001  ...  65/04\nDhawan Marg, Rajpur Sonarpur 590551
+1        C002  ...        H.No. 78\nSharaf Ganj\nIndore 928261
+2        C003  ...        H.No. 53, Krishna Ganj, Dhule-346480
+3        C004  ...                 145\nSibal, Rourkela-650344
+4        C005  ...      34/168\nSachar Street\nBhatpara 002691
+5        C006  ...           15/89, Dayal Chowk, Rohtak 586046
+6        C007  ...    H.No. 501\nGoswami Path, Bhilwara 482554
+7        C008  ...      H.No. 589, Gala Circle, Nandyal-774484
+8        C009  ...           28/64\nLanka Marg, Ramgarh 141634
+9        C010  ...     H.No. 21\nSinghal Path\nHindupur 170985
+
+[10 rows x 7 columns]
+
+ORDERS
+Shape: (1000, 10)
+
+Data Types:
+Order_ID         int64
+Customer_ID        str
+Product_ID       int64
+Quantity         int64
+Order_Date         str
+Order_Time         str
+Delivery_Date      str
+Delivery_Time      str
+Location           str
+Occasion           str
+dtype: object
+
+First 10 Records:
+   Order_ID Customer_ID  Product_ID  ...  Delivery_Time   Location         Occasion
+0         1        C037          67  ...        7:27:10  Bardhaman      Anniversary
+1         2        C019          41  ...        7:16:17     Jaipur           Diwali
+2         3        C029          67  ...       17:39:00   Bilaspur      Anniversary
+3         4        C012          14  ...        6:33:23   Guwahati         Birthday
+4         5        C078          58  ...       11:08:52     Rajkot  Valentine's Day
+5         6        C040          28  ...       19:06:46      Sirsa   Raksha Bandhan
+6         7        C009          45  ...       10:07:17     Nanded         Birthday
+7         8        C097          43  ...        8:44:45     Morena           Diwali
+8         9        C044          27  ...       23:59:54     Rajkot   Raksha Bandhan
+9        10        C099          56  ...       20:47:43     Ambala      Anniversary
+
+[10 rows x 10 columns]
+
+PRODUCTS
+Shape: (70, 5)
+
+Data Types:
+Product_ID      int64
+Product_Name      str
+Category          str
+Price (INR)     int64
+Occasion          str
+dtype: object
+
+First 10 Records:
+   Product_ID      Product_Name   Category  Price (INR)         Occasion
+0           1        Magnam Set  Soft Toys         1935    All Occasions
+1           2      Voluptas Box     Plants          441  Valentine's Day
+2           3         Eius Gift     Colors         1534  Valentine's Day
+3           4   Accusantium Set     Sweets         1199           Diwali
+4           5        Natus Gift     Colors         1444    All Occasions
+5           6          Quos Box       Cake         1112             Holi
+6           7          Quos Set  Soft Toys          409             Holi
+7           8           Qui Box     Sweets          252      Anniversary
+8           9       Aperiam Box     Colors         1605   Raksha Bandhan
+9          10  Accusantium Gift       Cake          259         Birthday

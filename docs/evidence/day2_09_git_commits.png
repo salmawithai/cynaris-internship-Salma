@@ -1,0 +1,6 @@
+PS D:\Projects\cynaris-internship-Salma> git log --oneline -5
+09d78a0 (HEAD -> feat/aiml-W1-salma, origin/feat/aiml-W1-salma) docs: document week 1 day 2 implementation
+5c8f5bd feat: pandas data manipulation and statistics
+bfb261f docs: add Week 1 Day 1 environment proof
+7e20d23 feat: complete Week 1 Day 1 CrewAI environment setup
+467de0b (origin/feat/cynaris-setup-salma, feat/cynaris-setup-salma) chore: add gitignore for Python project
